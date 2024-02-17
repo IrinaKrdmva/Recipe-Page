@@ -1,0 +1,58 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== FONT WEIGHT ==========*/
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*========== COLORS ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --primary-nutmeg: hsl(14, 45%, 36%);
+  --primary-darkraspberry: hsl(332, 51%, 32%);
+  --secondary-white: hsl(0, 0%, 100%);
+  --secondary--rosewhite: hsl(330, 100%, 98%);
+  --secondary--eggshell: hsl(30, 54%, 90%);
+  --secondary--lightgrey: hsl(30, 18%, 87%);
+  --secondary--wengebrown: hsl(30, 10%, 34%);
+  --secondary--darkcharcoal: hsl(24, 5%, 18%);
+
+  /*========== FONTS ==========*/
+  --font-young: "Young Serif", serif;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 375px;
+  max-width: 1440px;
+  font-size: 16px;
+  background-color: var(--secondary--eggshell);
+}
+
+main {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
