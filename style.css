@@ -25,6 +25,7 @@
   --font-outfit: "Outfit", sans-serif;
 }
 
+/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -37,9 +38,11 @@ html {
 
 body {
   min-width: 375px;
-  max-width: 1440px;
   font-size: 16px;
   background-color: var(--secondary--eggshell);
+  display: grid;
+  place-content: center;
+  min-block-size: 100vh;
 }
 
 main {
@@ -47,8 +50,67 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1.5rem;
+  font-family: var(--font-outfit);
 }
 
+section {
+  margin: 1.5rem;
+  width: 100%;
+}
+
+/*=============== CONTENT ===============*/
+
+.recipe-container {
+  border: 2px solid red;
+  padding-top: 7rem;
+}
+
+.recipe {
+  border: 2px solid green;
+  width: 42rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--secondary-white);
+}
+
+.recipe-img {
+  width: 38rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.recipe-title {
+  font-family: var(--font-young);
+  margin-bottom: 2rem;
+  font-weight: var(--font-regular);
+}
+
+.recipe-text {
+  font-weight: var(--font-regular);
+  font-size: 0.9rem;
+}
+
+.recipe-prep {
+  border: 1px solid greenyellow;
+  background-color: var(--secondary--rosewhite);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  margin-left: 0;
+  line-height: 2rem;
+}
+
+.recipe-prep ul {
+  font-size: small;
+}
+
+.recipe-prep-title {
+  color: var(--primary-darkraspberry);
+  margin-left: -1rem;
+  font-size: 1rem;
+  font-weight: var(--font-semibold);
+}
+/*=============== FOOTER ===============*/
 .attribution {
   font-size: 11px;
   text-align: center;
