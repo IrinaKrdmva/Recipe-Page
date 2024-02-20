@@ -14,11 +14,11 @@
   --primary-nutmeg: hsl(14, 45%, 36%);
   --primary-darkraspberry: hsl(332, 51%, 32%);
   --secondary-white: hsl(0, 0%, 100%);
-  --secondary--rosewhite: hsl(330, 100%, 98%);
-  --secondary--eggshell: hsl(30, 54%, 90%);
-  --secondary--lightgrey: hsl(30, 18%, 87%);
-  --secondary--wengebrown: hsl(30, 10%, 34%);
-  --secondary--darkcharcoal: hsl(24, 5%, 18%);
+  --secondary-rosewhite: hsl(330, 100%, 98%);
+  --secondary-eggshell: hsl(30, 54%, 90%);
+  --secondary-lightgrey: hsl(30, 18%, 87%);
+  --secondary-wengebrown: hsl(30, 10%, 34%);
+  --secondary-darkcharcoal: hsl(24, 5%, 18%);
 
   /*========== FONTS ==========*/
   --font-young: "Young Serif", serif;
@@ -37,9 +37,10 @@ html {
 }
 
 body {
+  color: var(--secondary-wengebrown);
   min-width: 375px;
   font-size: 16px;
-  background-color: var(--secondary--eggshell);
+  background-color: var(--secondary-eggshell);
   display: grid;
   place-content: center;
   min-block-size: 100vh;
@@ -50,24 +51,28 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 1.5rem;
+  line-height: 1.5;
   font-family: var(--font-outfit);
 }
 
 section {
-  margin: 1.5rem;
+  margin: 1rem;
   width: 100%;
+}
+
+hr {
+  color: var(--secondary-lightgrey);
+  opacity: 0.3;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 /*=============== CONTENT ===============*/
 
 .recipe-container {
-  border: 2px solid red;
   padding-top: 7rem;
 }
 
 .recipe {
-  border: 2px solid green;
   width: 42rem;
   padding: 2rem;
   border-radius: 1.5rem;
@@ -81,9 +86,11 @@ section {
 }
 
 .recipe-title {
+  color: var(--secondary-darkcharcoal);
   font-family: var(--font-young);
   margin-bottom: 2rem;
   font-weight: var(--font-regular);
+  font-size: 2.25rem;
 }
 
 .recipe-text {
@@ -91,17 +98,24 @@ section {
   font-size: 0.9rem;
 }
 
+/*========= PREPARATION =========*/
+
 .recipe-prep {
-  border: 1px solid greenyellow;
-  background-color: var(--secondary--rosewhite);
+  background-color: var(--secondary-rosewhite);
   border-radius: 0.5rem;
   padding: 1.5rem 2rem;
   margin-left: 0;
-  line-height: 2rem;
+  line-height: 2;
 }
 
 .recipe-prep ul {
-  font-size: small;
+  font-size: var(--font-regular);
+}
+
+.recipe-prep ul li::marker,
+.recipe-ingredients ul li::marker {
+  font-size: 0.7rem;
+  color: var(--primary-nutmeg);
 }
 
 .recipe-prep-title {
@@ -110,11 +124,92 @@ section {
   font-size: 1rem;
   font-weight: var(--font-semibold);
 }
+
+/*========= INGREDIENTS =========*/
+.recipe-ingredients {
+  line-height: 2;
+}
+.recipe-ingredients ul li,
+.recipe-prep ul li {
+  padding-left: 1rem;
+}
+.recipe-ing-title,
+.recipe-inst-title,
+.recipe-nutri-title {
+  font-family: var(--font-young);
+  margin-left: -1.2rem;
+  font-size: 1.55rem;
+  font-weight: var(--font-regular);
+  margin-bottom: 1.2rem;
+  color: var(--primary-nutmeg);
+}
+
+/*========= INSTRUCTIONS =========*/
+.recipe-instructions ol li {
+  padding: 0 0 0.5rem 1rem;
+  font-size: 0.95rem;
+  margin-left: 0.3rem;
+}
+
+.recipe-instructions ol li::marker {
+  color: var(--primary-nutmeg);
+  font-weight: var(--font-semibold);
+  font-family: var(--font-outfit);
+}
+
+/*========= NUTRITION =========*/
+.recipe-nutri-text {
+  margin-left: -1.2rem;
+}
+.recipe-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.recipe-table tr td {
+  padding: 0.75rem;
+}
+
+tr:nth-child(1),
+tr:nth-child(2),
+tr:nth-child(3) {
+  border-bottom: 1px solid var(--secondary-lightgrey);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+.recipe-table-values {
+  color: var(--primary-nutmeg);
+  font-weight: var(--font-bold);
+}
 /*=============== FOOTER ===============*/
 .attribution {
+  margin-top: 1.5rem;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 680px) {
+  .recipe-container {
+    padding-top: 0;
+  }
+
+  .recipe {
+    width: 100%;
+    padding::0 0 0 2rem;
+    border-radius: 0;
+  }
+
+  .recipe-img {
+    width: 100%;
+    border-radius: 0;
+    margin: -2rem;
+    margin-bottom: 2.5rem;
+  }
 }
