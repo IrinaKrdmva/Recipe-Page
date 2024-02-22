@@ -1,7 +1,3 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== FONT WEIGHT ==========*/
@@ -38,8 +34,7 @@ html {
 
 body {
   color: var(--secondary-wengebrown);
-  min-width: 375px;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: var(--secondary-eggshell);
   display: grid;
   place-content: center;
@@ -74,14 +69,14 @@ hr {
 }
 
 .recipe {
-  width: 42rem;
+  max-width: 42rem;
   padding: 2rem;
   border-radius: 1.5rem;
   background-color: var(--secondary-white);
 }
 
 .recipe-img {
-  width: 38rem;
+  width: 100%;
   border-radius: 0.5rem;
   margin-bottom: 2.5rem;
 }
@@ -113,8 +108,7 @@ hr {
   font-size: var(--font-regular);
 }
 
-.recipe-prep ul li::marker,
-.recipe-ingredients ul li::marker {
+.recipe ul li::marker {
   font-size: 0.7rem;
   color: var(--primary-nutmeg);
 }
@@ -130,13 +124,10 @@ hr {
 .recipe-ingredients {
   line-height: 2;
 }
-.recipe-ingredients ul li,
-.recipe-prep ul li {
+.recipe ul li {
   padding-left: 1rem;
 }
-.recipe-ing-title,
-.recipe-inst-title,
-.recipe-nutri-title {
+.recipe-sec-title {
   font-family: var(--font-young);
   margin-left: -1.2rem;
   font-size: 1.55rem;
@@ -189,7 +180,7 @@ tr:last-child {
 /*=============== FOOTER ===============*/
 .attribution {
   margin-top: 1.5rem;
-  font-size: 11px;
+  font-size: 0.7rem;
   text-align: center;
 }
 .attribution a {
@@ -202,7 +193,6 @@ tr:last-child {
   }
 
   .recipe {
-    width: 100vw;
     padding: 0 2rem 0 2rem;
     border-radius: 0;
     margin: 0;
@@ -210,7 +200,6 @@ tr:last-child {
   }
 
   .recipe-img {
-    width: 100vw;
     border-radius: 0;
     margin: -2rem;
     margin-bottom: 2.5rem;
